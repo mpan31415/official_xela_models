@@ -13,7 +13,8 @@ def generate_launch_description():
             "xela_sensor",
             description="Model of xela sensor.",
             default_value="allegro_hand_right_curved",
-            choices=["allegro_hand_right_curved", "allegro_hand_left_curved"],
+            # default_value="official_xela_allegro",
+            # choices=["allegro_hand_right_curved", "allegro_hand_left_curved"],
         )
     )
     # Initialize Arguments
@@ -24,6 +25,7 @@ def generate_launch_description():
         FindPackageShare("official_xela_models"),
         "urdf",
         PythonExpression(["'", xela_sensor, ".xacro'"]) 
+        # PythonExpression(["'", xela_sensor, ".urdf'"]) 
     ])
     declared_arguments.append(
         DeclareLaunchArgument(

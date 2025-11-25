@@ -22,14 +22,14 @@
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
         <geometry>
-          <mesh filename="package://official_xela_models/mesh/4x4.stl"/>
+          <mesh filename="package://official_xela_models/mesh/sensor_4x4.stl"/>
         </geometry>
       </collision>
       <xacro:if value="${body == 1}">
         <visual>
           <origin xyz="0 0 0" rpy="0 0 0" />
           <geometry>
-            <mesh filename="package://official_xela_models/mesh/4x4.stl"/>
+            <mesh filename="package://official_xela_models/mesh/sensor_4x4.stl"/>
           </geometry>
           <material name="${col}"/>
         </visual>

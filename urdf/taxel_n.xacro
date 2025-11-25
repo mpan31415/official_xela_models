@@ -6,12 +6,12 @@
   <!-- <xacro:taxel_n sequence="${sequence}_4x6_01" x="${1*txstep+xoff}" y="${4*tystep-yoff}" z="${zoff}" parent="${bseq}_4x6_link" sensor_collision="${sensor_collision}" /> -->
   <xacro:macro name="taxel_n" params="sequence parent x:=0.0 y:=0.0 z:=0.0 rx:=0.0 ry:=0.0 rz:=0.0 col:='blue' zmod:=0.0 sensor_collision:=1 sensor_inertial:=0">
 
-    <joint name="${sequence}_joint" type="prismatic">
+    <joint name="${sequence}_joint" type="fixed">
       <origin xyz="${x} ${y} ${z}" rpy="${radians(rx)} ${radians(ry)} ${radians(rz)}"/>
       <parent link="${parent}"/>
       <child link="${sequence}_link"/>
       <axis xyz="0 0 1"/>
-      <limit effort="100.0" lower="${-0.001-zmod}" upper="0.000" velocity="0.5"/>
+      <!-- <limit effort="100.0" lower="${-0.001-zmod}" upper="0.000" velocity="0.5"/> -->
     </joint>
 
     <link name="${sequence}_link">

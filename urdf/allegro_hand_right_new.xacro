@@ -226,7 +226,7 @@
       <link name="${sequence}link_${finger_num*4+0}">	
         <visual>
           <geometry>
-            <mesh filename="package://official_xela_models/mesh/allegro/link_0.0_ext.STL" />
+            <mesh filename="package://official_xela_models/mesh/allegro/link_0_ext.STL" />
           </geometry>
           <material name="grey"/>
         </visual>
@@ -242,7 +242,7 @@
           <inertia ixx="1.38e-07" ixy="1.27e-10" ixz="4.83e-09" iyy="6.83e-08" iyz="0.0" izz="1.16e-07" />
         </inertial>
       </link>
-      <joint name="joint_${finger_num*4+0}.0" type="revolute">
+      <joint name="joint_${finger_num*4+0}" type="revolute">
         <axis xyz="0 0 1"/>
         <limit effort="15" velocity="7" lower="${-0.57+0.1}" upper="${0.57-0.1}" />
         <parent link="${parent}"/>
@@ -253,7 +253,7 @@
         <visual>
           <geometry>
             <xacro:if value="${phalanges == 1}">
-              <mesh filename="package://official_xela_models/mesh/allegro/link_1.0.stl" />
+              <mesh filename="package://official_xela_models/mesh/allegro/link_1.stl" />
             </xacro:if>
             <xacro:if value="${phalanges != 1}">
               <mesh filename="package://official_xela_models/mesh/allegro/link_1_ns.stl"/>   
@@ -322,7 +322,7 @@
         <xacro:sensor4x4n x_seq="${x_seq}${finger_num*4+0}" col="red" parent="${sequence}link_${finger_num*4+1}" ry="90" z="0.021" y="-0.012" x="0.0108" body="1" taxels="${taxels}" skipinertia="1" />
       </xacro:if>
 
-      <joint name="joint_${finger_num*4+1}.0" type="revolute">
+      <joint name="joint_${finger_num*4+1}" type="revolute">
         <limit effort="15" velocity="7" lower="${-0.296+0.1}" upper="${1.71-0.1}" />
         <axis xyz="0 1 0"/>
         <parent link="${sequence}link_${finger_num*4+0}"/>
@@ -333,7 +333,7 @@
         <visual>
           <geometry>
             <xacro:if value="${phalanges == 1}">
-              <mesh filename="package://official_xela_models/mesh/allegro/link_2.0.stl" />
+              <mesh filename="package://official_xela_models/mesh/allegro/link_2.stl" />
             </xacro:if>
             <xacro:if value="${phalanges != 1}">
               <mesh filename="package://official_xela_models/mesh/allegro/link_2_ns.stl"/>   
@@ -398,7 +398,7 @@
         <xacro:sensor4x4n x_seq="${x_seq}${finger_num*4+2}" col="red" parent="${sequence}link_${finger_num*4+2}" ry="90" z="0.0445" y="-0.012" x="0.01" body="1" taxels="${taxels}" skipinertia="1" />
       </xacro:if>
 
-      <joint name="joint_${finger_num*4+2}.0" type="revolute">
+      <joint name="joint_${finger_num*4+2}" type="revolute">
         <axis xyz="0 1 0"/>
         <limit effort="15" velocity="7" lower="${-0.274+0.1}" upper="${1.809-0.1}" />
         <parent link="${sequence}link_${finger_num*4+1}"/>
@@ -408,7 +408,7 @@
       <link name="${sequence}link_${finger_num*4+3}">	
         <visual>
           <geometry>
-            <mesh filename="package://official_xela_models/mesh/allegro/link_3.0.STL" />
+            <mesh filename="package://official_xela_models/mesh/allegro/link_3.STL" />
           </geometry>
           <material name="black" />
         </visual>
@@ -440,7 +440,7 @@
           </inertial>
         </xacro:unless>
       </link>
-      <joint name="joint_${finger_num*4+3}.0" type="revolute">
+      <joint name="joint_${finger_num*4+3}" type="revolute">
         <axis xyz="0 1 0"/>
         <limit effort="15" velocity="7" lower="${-0.327+0.1}" upper="${1.718-0.1}" />
         <parent link="${sequence}link_${finger_num*4+2}"/>
@@ -468,7 +468,7 @@
       <link name="${sequence}link_${finger_num*4+0}">
         <visual>
           <geometry>
-            <mesh filename="package://official_xela_models/mesh/allegro/link_12.0_right.STL" />
+            <mesh filename="package://official_xela_models/mesh/allegro/link_12_right.STL" />
           </geometry>
           <material name="grey" />
         </visual>
@@ -484,7 +484,7 @@
           <inertia ixx="3.36e-06" ixy="0.0" ixz="1.76e-08" iyy="3.84e-06" iyz="2.46e-07" izz="2.59e-06" />
         </inertial>
       </link>
-      <joint name="joint_${finger_num*4+0}.0" type="revolute">
+      <joint name="joint_${finger_num*4+0}" type="revolute">
         <axis xyz="-1 0 0"/>
         <limit effort="15" velocity="7" lower="${0.363-0.1}" upper="${1.496-0.1}" />
         <parent link="${parent}"/>
@@ -494,7 +494,7 @@
       <link name="${sequence}link_${finger_num*4+1}">	
         <visual>
           <geometry>
-            <mesh filename="package://official_xela_models/mesh/allegro/link_13.0.STL" />
+            <mesh filename="package://official_xela_models/mesh/allegro/link_13.STL" />
           </geometry>
           <material name="grey" />
         </visual>
@@ -531,7 +531,7 @@
           <child link="${sequence}link_${finger_num*4+2}_cover" />
         </joint>
       </xacro:if>
-      <joint name="joint_${finger_num*4+1}.0" type="revolute">
+      <joint name="joint_${finger_num*4+1}" type="revolute">
         <axis xyz="0 0 1"/>
         <limit effort="15" velocity="7" lower="${-0.205+0.1}" upper="${1.263-0.1}" />
         <parent link="${sequence}link_${finger_num*4+0}"/>
@@ -542,7 +542,7 @@
         <visual>
           <geometry>
             <xacro:if value="${phalanges == 1}">
-              <mesh filename="package://official_xela_models/mesh/allegro/thumb_1.0.stl"/>   
+              <mesh filename="package://official_xela_models/mesh/allegro/thumb_1.stl"/>   
             </xacro:if>
             <xacro:if value="${phalanges != 1}">
               <mesh filename="package://official_xela_models/mesh/allegro/thumb_1.1_ns.stl"/>   
@@ -606,7 +606,7 @@
         <xacro:sensor4x4n x_seq="${x_seq}${finger_num*4+1}" parent="${sequence}link_${finger_num*4+2}" ry="90" z="0.023" y="-0.012" x="0.011" body="1" taxels="${taxels}" skipinertia="1" />
       </xacro:if>
 
-      <joint name="joint_${finger_num*4+2}.0" type="revolute">
+      <joint name="joint_${finger_num*4+2}" type="revolute">
         <axis xyz="0 1 0"/>
         <limit effort="15" velocity="7" lower="${-0.289+0.1}" upper="${1.744-0.1}" />
         <parent link="${sequence}link_${finger_num*4+1}"/>
@@ -617,7 +617,7 @@
         <visual>
           <geometry>
             <xacro:if value="${phalanges == 1}">
-              <mesh filename="package://official_xela_models/mesh/allegro/thumb_2.0.stl"/>  
+              <mesh filename="package://official_xela_models/mesh/allegro/thumb_2.stl"/>  
             </xacro:if>
             <xacro:if value="${phalanges != 1}">
               <mesh filename="package://official_xela_models/mesh/allegro/thumb_1.2_ns.stl"/>   
@@ -708,7 +708,7 @@
         <xacro:sensor4x4n x_seq="${x_seq}${finger_num*4+2}" parent="${sequence}link_${finger_num*4+3}" ry="90" z="0.021" y="-0.012" x="0.011" body="1" taxels="${taxels}" skipinertia="1" />
       </xacro:if>
 
-    <joint name="joint_${finger_num*4+3}.0" type="revolute">
+    <joint name="joint_${finger_num*4+3}" type="revolute">
       <axis xyz="0 1 0"/>
       <limit effort="15" velocity="7" lower="${-0.262+0.1}" upper="${1.819-0.1}" />
       <parent link="${sequence}link_${finger_num*4+2}"/>
